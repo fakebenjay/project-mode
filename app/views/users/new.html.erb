@@ -1,0 +1,7 @@
+<h2>Make a new user!</h2>
+<%= form_for @user do |f| %>
+<div class="Name">Name: <%= f.text_field :name %></div>
+<div class="Bio">Bio: <%= f.text_area :description %></div>
+<div class="PrimarySkill">Skill (you can only do one thing): <%= f.text_field :primary_skill %></div>
+<div class="Submit"><%= f.submit %></div>
+<% end %>

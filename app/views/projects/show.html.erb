@@ -1,0 +1,8 @@
+<h2><%= @project.name %></h2>
+<p><%= @project.description %></p>
+
+<ul>
+<% @project.users.each do |u| %>
+<li><%= link_to u.name, user_path(u) %> - <%= u.primary_skill %></li>
+<% end %>
+</ul>

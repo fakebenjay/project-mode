@@ -1,0 +1,9 @@
+<h2><%= @user.name %></h2>
+<h4><%= @user.primary_skill %></h4>
+<p><%= @user.description %></p>
+
+<ul>
+<% @user.projects.each do |u| %>
+<li><%= link_to u.name, category_project_path(u.category_id, u) %></li>
+<% end %>
+</ul>

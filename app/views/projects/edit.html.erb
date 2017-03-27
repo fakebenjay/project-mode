@@ -1,0 +1,7 @@
+<h2>Editing <%= @project.name %></h2>
+<%= form_for [@category, @project] do |f| %>
+<%= f.hidden_field :category_id, value: @category.id %>
+<div class="Name">Name: <%= f.text_field :name %></div>
+<div class="Description">Description: <%= f.text_area :description %></div>
+<div class="Submit"><%= f.submit %></div>
+<% end %>
